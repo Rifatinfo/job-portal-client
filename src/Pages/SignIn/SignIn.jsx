@@ -2,10 +2,15 @@ import Lottie from 'lottie-react';
 import AnimationSignIn from '../../assets/Animation_SignIn - 1742545653639.json'
 import { useContext } from 'react';
 import AuthContext from '../../Context/AuthContext/AuthContext';
+import { useLocation, useNavigate } from 'react-router-dom';
 const SignIn = () => {
     
     const {signInUser} = useContext(AuthContext);
-
+    const location = useLocation();
+    const navigate = useNavigate();
+    const form = location.state || '/'
+    console.log(form);
+    
     const handleSign = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -16,6 +21,7 @@ const SignIn = () => {
         signInUser(email, password)
         .then(result => {
             console.log(result.user);
+            navigate(form);
           })
           .catch(error => {
             console.log(error.message)
