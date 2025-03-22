@@ -20,12 +20,12 @@ const Banner = () => {
            <motion.img 
            animate={{y:[0, 50, 0]}}
            transition={{duration : 10, repeat: Infinity}}
-           src={banner_img_1} alt="" className="object-contain ">
+           src={banner_img_1} alt="" className="object-contain h-40 md:h-80">
            </motion.img>
            <motion.img 
            animate={{x:[100, 150, 100]}}
            transition={{duration : 10, repeat: Infinity}}
-           src={banner_img_2} alt="" className="object-contain ">
+           src={banner_img_2} alt="" className="object-contain h-40 w-40 lg:w-full lg:h-60">
            </motion.img>
           </div>
         </div>

@@ -10,8 +10,8 @@ const HotJobs = () => {
         .then(data => setJobs(data))
     }, [])
     return (
-        <div>
-            <div>
+        <div className="max-w-7xl mx-auto mt-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-2">
             {
                 jobs.map(job => <JobCart key={job._id} job={job}/>)
             }
