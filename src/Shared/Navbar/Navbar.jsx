@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { BiX } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import AuthContext from "../../Context/AuthContext/AuthContext";
+import { AuthContext } from "../../Context/AuthContext/AuthProvider";
+// import AuthContext from "../../Context/AuthContext/AuthContext";
 
 const Navbar = () => {
     const {user, signOutUser} = useContext(AuthContext);
@@ -11,7 +12,7 @@ const Navbar = () => {
 
     const menuItems = [
         { name: "Home", link: "/" },
-        { name: "About Us", link: "/about" },
+        { name: "My Application", link: "/MyApplications" },
         { name: "News", link: "/" },
         { name: "Contact", link: "/contact" }
     ];

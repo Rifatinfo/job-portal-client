@@ -36,7 +36,8 @@ const router = createBrowserRouter([
       },
       {
         path : "/MyApplications",
-        element : <MyApplications/>
+        element : <MyApplications/>,
+        loader : () => fetch('http://localhost:5000/job-application-all')
       }
     ],
   },

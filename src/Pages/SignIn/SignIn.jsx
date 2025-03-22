@@ -1,8 +1,9 @@
 import Lottie from 'lottie-react';
 import AnimationSignIn from '../../assets/Animation_SignIn - 1742545653639.json'
 import { useContext } from 'react';
-import AuthContext from '../../Context/AuthContext/AuthContext';
+// import AuthContext from '../../Context/AuthContext/AuthContext';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthContext/AuthProvider';
 const SignIn = () => {
     
     const {signInUser} = useContext(AuthContext);

@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const JobApply = () => {
     const { id } = useParams();
     console.log(id);
-
+    const navigate = useNavigate() 
     const handleJobApplyForm = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -16,7 +16,7 @@ const JobApply = () => {
         const phone = form.phone.value;
         const cover = form.cover.value;
         console.log(linkedIn, gitHub, resume, name, email, phone, cover);
-
+        
 
         const jobApplication = {
             job_id: id,
@@ -46,6 +46,7 @@ const JobApply = () => {
                         icon: "success",
                         draggable: true
                       });
+                      navigate("/MyApplications");
                 }
             }
             )
