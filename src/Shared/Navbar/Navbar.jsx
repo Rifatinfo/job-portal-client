@@ -13,8 +13,9 @@ const Navbar = () => {
     const menuItems = [
         { name: "Home", link: "/" },
         { name: "My Application", link: "/MyApplications" },
-        { name: "News", link: "/" },
-        { name: "Contact", link: "/contact" }
+        { name: "Add Jobs", link: "/add-jobs" },
+        { name: "My Posted Jobs", link: "/my-posted-job" },
+        { name: "View Applications", link: "/viewApplications" }
     ];
      
     const handleSignOut = () =>{

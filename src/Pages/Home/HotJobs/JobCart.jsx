@@ -28,7 +28,7 @@ const JobCart = ({ job }) => {
                 </div>
                 <div className="mt-4 flex justify-between items-center flex-1">
                     <p className="text-xl font-bold text-blue-600">
-                        {job.salaryRange.min}-{job.salaryRange.max} {job.salaryRange.currency.toUpperCase()}
+                        {job.salaryRange.min}-{job.salaryRange.max} {job.salaryRange.currency}
                     </p>
                     <Link to={`/jobs/${_id}`}>
                         <button className="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-600">

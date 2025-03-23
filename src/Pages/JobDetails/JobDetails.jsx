@@ -23,7 +23,7 @@ const JobDetails = () => {
                 <div className="mb-4">
                     <h3 className="text-xl font-semibold">Salary</h3>
                     <p className="text-blue-600 text-lg font-bold">
-                        {job.salaryRange.min} - {job.salaryRange.max} {job.salaryRange.currency.toUpperCase()}
+                        {job.salaryRange.min} - {job.salaryRange.max} {job.salaryRange.currency}
                     </p>
                 </div>
                 <div className="mb-4">
