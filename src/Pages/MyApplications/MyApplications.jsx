@@ -1,4 +1,6 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 // import { useLoaderData } from "react-router-dom";
 
 const MyApplications = () => {
@@ -6,11 +8,22 @@ const MyApplications = () => {
     // const {email} = useLoaderData();
     const [jobs, setJobs] = useState([]);
     console.log(jobs);
-    
+    const axiosInstance = useAxiosSecure();
     useEffect(() => {
-        fetch('http://localhost:5000/job-applications?email=mdrifathossainsinfo@gmail.com')
-        .then(res => res.json())
-        .then(data => setJobs(data))
+        // fetch('http://localhost:5000/job-applications?email=mdrifathossainsinfo@gmail.com')
+        // .then(res => res.json())
+        // .then(data => setJobs(data))
+
+        // axios.get('http://localhost:5000/job-applications?email=mdrifathossainsinfo@gmail.com', {
+        //   withCredentials : true
+        // })
+        // .then(res => {
+        //   setJobs(res.data);
+        // })
+        axiosInstance.get('/job-applications?email=mdrifathossainsinfo@gmail.com')
+        .then(res => {
+             setJobs(res.data);
+           })
     },[])
     return (
         <div className="container mx-auto p-4">
